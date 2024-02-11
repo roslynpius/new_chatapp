@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     // Correctly assigning the tool installation path to a variable
-                    def scannerHome = tool name: 'sonarqube', type: 'SonarQubeScanner'
+                    def scannerHome = tool 'sonarqube';
                     // Use the tool with correct environment variable
                     withSonarQubeEnv('sq-server-1') {
                         // Using the scanner with the scannerHome variable
